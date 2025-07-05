@@ -1,0 +1,33 @@
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .marquee-container {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .important-update {
+    margin-right: 20px;
+    color: #004a8f;
+  }
+  
+  .blink-text {
+    animation: blink 1s infinite;
+    font-weight: bold;
+  }
+  
+  .marquee-links a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .marquee-links a:hover {
+    color: #0072bc;
+  }
+  

@@ -1,0 +1,116 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+  }
+  
+  .login-container {
+    max-width: 420px;
+    margin: 80px auto;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #0078d4;
+  }
+  
+  .captcha-box {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .captcha-box input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    width: 120px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .captcha-box button {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  
+  .captcha-box button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0055aa;
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #003366;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

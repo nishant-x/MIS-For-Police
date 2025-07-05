@@ -1,0 +1,169 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #002147;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header img {
+    height: 50px;
+  }
+  
+  .portal_name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Login Section */
+  .main_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+  }
+  
+  .container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Left Side */
+  .login_div.leftdiv {
+    flex: 1;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .login_div.leftdiv img {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .login_div.leftdiv h3 {
+    margin-bottom: 10px;
+  }
+  
+  .login_div.leftdiv h1 {
+    margin: 0;
+  }
+  
+  /* Right Side */
+  .login_div.rightdiv {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login_div.rightdiv h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .login_div.rightdiv h4 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #555;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #00509e;
+  }
+  
+  /* Captcha styles */
+  .captcha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .captcha input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    width: 120px;
+    background-color: #eee;
+    border: none;
+    text-align: center;
+  }
+  
+  .refresh_button {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  
+  .refresh_button:hover {
+    color: #003366;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #002147;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

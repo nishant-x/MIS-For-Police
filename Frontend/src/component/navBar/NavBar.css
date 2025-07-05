@@ -1,0 +1,39 @@
+.nav_bar {
+    background-color: #0072bc;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .nav_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav_bar li {
+    margin-right: 20px;
+  }
+  
+  .nav_bar a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav_bar a:hover,
+  .nav_bar a.active {
+    background-color: #005c95;
+  }
+  
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  

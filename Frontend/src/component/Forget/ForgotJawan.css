@@ -1,0 +1,114 @@
+.main_login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    background-color: #004a8f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header img {
+    height: 60px;
+  }
+  
+  .portal_name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+  
+  .login_div {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+  }
+  
+  .leftdiv img {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .leftdiv h1,
+  .leftdiv h3 {
+    color: #004a8f;
+  }
+  
+  .rightdiv form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #004a8f;
+  }
+  
+  .form-group h5 {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    background-color: #004a8f;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #002d5e;
+  }
+  
+  h6 {
+    font-size: 14px;
+  }
+  
+  h6 a {
+    text-decoration: none;
+    color: #004a8f;
+  }
+  
+  h6 span {
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #004a8f;
+    color: white;
+    padding: 12px 0;
+    margin-top: 20px;
+  }
+  

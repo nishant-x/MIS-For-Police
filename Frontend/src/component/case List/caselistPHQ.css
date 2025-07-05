@@ -1,0 +1,129 @@
+/* Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002147;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .header img {
+    height: 50px;
+  }
+  
+  .portal_name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Logout button */
+  .log {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+  
+  .logout-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Header title and search */
+  header {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  header form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  #search {
+    padding: 8px 12px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #888;
+    border-radius: 5px;
+  }
+  
+  header button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    background-color: #003f7f;
+  }
+  
+  /* Case card styles */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .jawan {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f4f6f8;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .jawan:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jawan_details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .jawan_details h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #002147;
+    color: white;
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  

@@ -1,0 +1,14 @@
+.services {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 50px;
+  }
+  
+  .service {
+    margin-bottom: 20px;
+  }
+  
+  .service h2 {
+    color: #0072bc;
+  }
+  

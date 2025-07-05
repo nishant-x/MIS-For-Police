@@ -1,0 +1,81 @@
+/* You can use your original login.css content here */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #002b5b;
+    color: white;
+    align-items: center;
+  }
+  
+  .portal_name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .main_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    background: #f3f3f3;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login_div {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .leftdiv {
+    background-color: #002b5b;
+    color: white;
+    text-align: center;
+  }
+  
+  .rightdiv {
+    background-color: #ffffff;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    width: 120px;
+    margin-top: 4px;
+  }
+  
+  .captcha .refresh_button {
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    width: auto;
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  .captcha .refresh_button:hover {
+    background-color: white;
+  }
+  
+  .error-message {
+    margin-top: 5px;
+  }
+  

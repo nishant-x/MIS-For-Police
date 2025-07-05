@@ -1,0 +1,99 @@
+.header {
+    background-color: #002147;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header img {
+    height: 60px;
+  }
+  
+  .portal_name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .log {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 20px;
+  }
+  
+  .logout-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .main_content {
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #004a8f;
+  }
+  
+  .case_details {
+    margin-top: 20px;
+  }
+  
+  .case_details h2 {
+    margin-bottom: 10px;
+    color: #004a8f;
+  }
+  
+  .case_details textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-top: 10px;
+  }
+  
+  .button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .submit {
+    background-color: #004a8f;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .submit:hover {
+    background-color: #002d5e;
+  }
+  
+  footer {
+    margin-top: 40px;
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
