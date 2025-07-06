@@ -5,22 +5,14 @@ import StationProfile from './Stationprofile';
 import StationCaseStats from './StationCases';
 import StationOrderPanel from './StationOrderpan';
 import LeaveApproval from './StationLeaveApp';
-import Footer from '../footr/Futer';
+import Footer from '../footr/Footer';
 import './station_home.css';
 
 const StationHome = () => {
   return (
     <div>
       <StationHeader />
-      <div className="main_container">
-        <StationNav />
-        <div className="station_details">
-          <StationProfile />
-          <StationCaseStats />
-          <StationOrderPanel />
-          <LeaveApproval />
-        </div>
-      </div>
+      
       <Footer />
     </div>
   );

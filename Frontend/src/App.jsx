@@ -2,45 +2,27 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importing Components
-import Header from "./component/HEAder/header";
-import Navbar from "./component/navBar/Nav";
-import Marquee from "./component/navBar/Marquee";
-import LoginCards from "./component/Logins/LoginCards";
-// import Foooter from "./component/footr/Futer";
-import Services from "./component/servics/Services";
-import AboutUs from "./component/about/Aboutus";
-// import Caselistjawan from "./component/case List/caselistJawan";
-import CaselistPHQ from "./component/case List/caselistPHQ";
-import StationHome from "./component/StationHome/StationHome";
+
+
+import Login from "./component/Login/Login.jsx";
+import Register from "./component/Register/Register.jsx";
+import AdminDashboard from './component/dashboards/AdminDashboard.jsx';
+import JawanDashboard from './component/dashboards/JawanDashboard.jsx';
+import PhqDashboard from './component/dashboards/PhqDashboard.jsx';
+
+
+
 const App = () => {
   return (
-
-    <ErrorBoundary fallback={<p>Something went wrong</p>}>
-  <Router>
-      {/* Common Components like Header, Navbar, Marquee */}
-      <Header />
-      <Navbar />
-      <Marquee />
-
+    <Router>
       <Routes>
-        <Route path="/" element={<StationHome />} />
-        <Route path="/StationLogin" element={<LoginCards />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<AboutUs />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
-        <Route path="/caselist-jawan" element={<CaselistJawan />} />
-        <Route path="/caselist-phq" element={<CaselistPHQ />} />
-        <Route path="*" element={<NoPage />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/jawan-dashboard" element={<JawanDashboard />} />
+        <Route path="/phq-dashboard" element={<PhqDashboard />} />
       </Routes>
-
-      {/* Footer at the bottom */}
-      <Footer />
     </Router>
-
-</ErrorBoundary>
-
-  
-
   );
 };
 
