@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importing Components
 
+
 import Login from "./Component2/Login/Login.jsx";
 import Register from "./component/Register/Register.jsx";
 import AdminDashboard from './Component2/dashboards/AdminDashboard.jsx';
