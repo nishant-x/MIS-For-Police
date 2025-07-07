@@ -24,6 +24,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 const authRoutes = require("./routes/auth"); // Authentication routes
+const achievementRoutes = require("./routes/achievement"); // Achievement routes
+app.use("/api/achievement", achievementRoutes); // Achievement API
 app.use("/api/auth", authRoutes);
 
 // Default route
