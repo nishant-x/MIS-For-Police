@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importing Components
 
-
-import Login from "./component/Login/Login.jsx";
+import Login from "./Component2/Login/Login.jsx";
 import Register from "./component/Register/Register.jsx";
-import AdminDashboard from './component/dashboards/AdminDashboard.jsx';
-import JawanDashboard from './component/dashboards/JawanDashboard.jsx';
-import PhqDashboard from './component/dashboards/PhqDashboard.jsx';
+import AdminDashboard from './Component2/dashboards/AdminDashboard.jsx';
+import JawanDashboard from './Component2/dashboards/JawanDashboard.jsx';
+import PhqDashboard from './Component2/dashboards/PhqDashboard.jsx';
+import Home from './component/Home/Home.jsx';
 
 
 
-const App = () => {
+  const App = () => {
   return (
     <Router>
       <Routes>
@@ -21,6 +21,7 @@ const App = () => {
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/jawan-dashboard" element={<JawanDashboard />} />
         <Route path="/phq-dashboard" element={<PhqDashboard />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

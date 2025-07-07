@@ -16,7 +16,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", form);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_LINK}/api/auth/register`, form);
       setMessage("✅ " + res.data.message);
     } catch (err) {
       setMessage("❌ " + (err.response?.data?.error || "Registration failed"));
@@ -40,7 +40,8 @@ const Register = () => {
           <select name="role" onChange={handleChange} value={form.role}>
             <option value="admin">admin</option>
             <option value="officer">jawan</option>
-            <option value="user">phq</option>
+            <option value="station">station</option>
+            <option value="phq">phq</option>
           </select>
         </div>
         <button type="submit">Register</button>

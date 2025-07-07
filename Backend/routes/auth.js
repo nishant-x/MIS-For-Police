@@ -11,7 +11,7 @@ router.post("/register", async (req, res) => {
   if (!username || !password || !role) {
     return res.status(400).json({ error: "All fields are required." });
   }
-const allowedRoles = ["admin", "jawan", "phq"];
+const allowedRoles = ["admin", "jawan", "phq" , "station"];
   if (!allowedRoles.includes(role)) {
     return res.status(400).json({ error: "Invalid role specified." });
   }
