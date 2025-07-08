@@ -1,1 +1,5 @@
 Nishant Ka Kaam
+
+07-07-2024 ->
+-added jawan status update and add location when the jawan is active_unavailable in station get [lat , lng] using  geocoding library then got the address by [lat, lng] from openstreetmap.
+-improve folder structure

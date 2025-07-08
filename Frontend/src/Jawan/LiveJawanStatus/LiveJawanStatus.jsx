@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import { useLocation } from 'react-router-dom';
 // import './home.css';
 
 const StatusTracker = () => {
@@ -7,24 +9,22 @@ const StatusTracker = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
+    const locations = useLocation();
+    const user = locations.state?.user;
+    console.log("User in Status JawanDashboard:", user.id);
+
+    
+
+      
   // Get address from coordinates
   const getAddressFromCoords = async (lat, lng) => {
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`,
-        {
-          headers: {
-            'User-Agent': 'jhadenishant@gmail.com'
-          }
-        }
-      );
-      const data = await response.json();
-      return data.display_name || "Location unavailable";
-    } catch (err) {
-      console.error("Geocoding failed:", err);
-      return "Could not fetch address";
-    }
-  };
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_LINK}/api/livestatus/geocode?lat=${lat}&lon=${lng}`);
+  const data = await response.json();
+
+
+  // console.log("data" , data)
+  return data.display_name;
+};
 
   // Get current position
   const getCurrentPosition = () => {
@@ -62,6 +62,8 @@ const StatusTracker = () => {
           timestamp: new Date()
         });
 
+
+
         await updateBackendStatus(newStatus, latitude, longitude, address);
       } catch (err) {
         setError("Failed to get location. Enable GPS and try again.");
@@ -74,14 +76,16 @@ const StatusTracker = () => {
     }
   };
 
+ 
+
   // Send data to backend
   const updateBackendStatus = async (status, lat, lng, address) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_LINK}/api/updatestatus`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_LINK}/api/livestatus/update`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          jawanId: userId, 
+          jawanId: user.id, 
           status,
           location: lat && lng ? { lat, lng, address } : null
         })

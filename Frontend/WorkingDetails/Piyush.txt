@@ -1,1 +1,40 @@
-Piyush Ka kaam
+
+## ✅ Police MIS Project – Task Summary
+
+### 1. **Backend Setup**
+
+* Used **Node.js + Express**
+* Connected to **MongoDB**
+* Used `.env` for secrets like `JWT_SECRET`, `MONGO_URI`
+
+
+### 3. **Authentication**
+
+* **Register API**: Adds user to DB with hashed password
+* **Login API**: Validates user, returns JWT token + user data
+* **Logout API**: Clears token cookie
+
+### 4. **Frontend Pages (React)**
+
+* **Login page**:
+
+  * Sends login request
+  * Saves token in **cookie**
+  * Redirects based on role:
+
+### 5. **Token Handling**
+
+* Stored token in **HTTP-only cookie**
+* Set Axios `withCredentials: true`
+
+### 6. **Security**
+
+* Used `bcrypt` for password hashing
+* Secured JWT with secret key
+
+### 7. **User Dashboards**
+
+* Created pages for each role
+* Show user info using data from cookie or navigation
+
+

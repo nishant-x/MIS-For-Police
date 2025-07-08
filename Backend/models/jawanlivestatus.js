@@ -1,13 +1,17 @@
 const mongoose = require("mongoose");
 
-
 const jawanstatusSchema = new mongoose.Schema({
-   jawanId: { type: String, required: true },
-   status: { 
+  jawanId: { 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'User',
+    required: true,
+    unique: true
+  },
+  status: { 
     type: String, 
     enum: ['active_available', 'active_unavailable', 'unavailable'], 
-    required: true,
-    default: 'unavailable' 
+    default: 'unavailable',
+    required: true
   },
   location: {
     type: {
@@ -15,10 +19,12 @@ const jawanstatusSchema = new mongoose.Schema({
       default: 'Point',
       enum: ['Point']
     },
-    coordinates: [Number], 
+    coordinates: [Number],
     address: String
   },
   timestamp: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("jawanstatus", jawanstatusSchema);
+
+
+module.exports = mongoose.model("JawanStatus", jawanstatusSchema);

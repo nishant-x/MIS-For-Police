@@ -24,7 +24,11 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 const authRoutes = require("./routes/auth"); // Authentication routes
+const achievementRoutes = require("./routes/achievement"); // Achievement routes
+const  livestatus = require("./routes/jawanstatusRouter.js") // Live status routes
+app.use("/api/achievement", achievementRoutes); // Achievement API
 app.use("/api/auth", authRoutes);
+app.use("/api/livestatus" , livestatus)
 
 // Default route
 app.get("/", (req, res) => {
