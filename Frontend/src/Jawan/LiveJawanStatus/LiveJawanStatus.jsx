@@ -1,19 +1,55 @@
-import React, { useState } from 'react';
-
+import React, { useState,useEffect } from 'react';
+import axios from "axios"
 import { useLocation } from 'react-router-dom';
 // import './home.css';
 
 const StatusTracker = () => {
+  
   const [status, setStatus] = useState('unavailable'); 
   const [location, setLocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isFetching, setIsFetching] = useState(true); 
 
     const locations = useLocation();
     const user = locations.state?.user;
-    console.log("User in Status JawanDashboard:", user.id);
+    const jawanId = user.id;
+    // console.log("User in Status JawanDashboard:", user.id);
 
     
+  useEffect(() => {
+    const fetchJawanStatus = async () => {
+      setIsFetching(true);
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_LINK}/api/livestatus/${jawanId}`);
+
+        console.log("responce data" , response.data);        
+        // Set the status from backend data
+        if (response.data.data) {
+          setStatus(response.data.data.status);
+          
+          // Set location if available
+          if (response.data.data.location) {
+            setLocation({
+              lat: response.data.data.location.coordinates[1],
+              lng: response.data.data.location.coordinates[0],
+              address: response.data.data.location.address,
+              timestamp: new Date(response.data.data.timestamp)
+            });
+          }
+        }
+      } catch (err) {
+        setError(err.response?.data?.message || 'Failed to fetch status');
+        // Keep default status if fetch fails
+      } finally {
+        setIsFetching(false);
+      }
+    };
+
+    if (jawanId) {
+      fetchJawanStatus();
+    }
+  }, [jawanId]); 
 
       
   // Get address from coordinates
@@ -61,8 +97,6 @@ const StatusTracker = () => {
           address,
           timestamp: new Date()
         });
-
-
 
         await updateBackendStatus(newStatus, latitude, longitude, address);
       } catch (err) {

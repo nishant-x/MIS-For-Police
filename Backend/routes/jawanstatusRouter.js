@@ -18,26 +18,35 @@ router.get('/geocode', async (req, res) => {
 });
 
 
-router.get('/status/:jawanId', async (req, res) => {
+router.get('/:jawanId', async (req, res) => {
   try {
-    const status = await JawanStatus.findOne({ jawanId: req.params.jawanId })
-      .populate('jawanId', 'name role'); // Optional: populate user details
-    
-    if (!status) {
+    const jawanStatus = await JawanStatus.findOne({ 
+      jawanId: req.params.jawanId 
+    }).populate('jawanId', 'name email'); // optionally populate user details
+
+    if (!jawanStatus) {
       return res.status(404).json({ 
         success: false, 
-        message: "No status found for this jawan" 
+        message: 'Jawan status not found' 
       });
     }
 
-    res.status(200).json({ success: true, data: status });
+    console.log("Data from backend", jawanStatus)
+
+    res.status(200).json({
+      success: true,
+      data: jawanStatus
+    });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ 
       success: false, 
+      message: 'Server error',
       error: error.message 
     });
   }
 });
+
 
 router.post('/update', async (req, res) => {
   try {
