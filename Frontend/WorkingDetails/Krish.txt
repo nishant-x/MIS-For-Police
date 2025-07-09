@@ -1,1 +1,7 @@
 Krish ka kaam
+
+
+07/07/2025
+Mongo atlas account creation
+Cloudinary account creation 
+Leave module mostly done

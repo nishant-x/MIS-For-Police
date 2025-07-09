@@ -10,6 +10,7 @@ import JawanDashboard from './Component/dashboards/JawanDashboard.jsx';
 import PhqDashboard from './Component/dashboards/PhqDashboard.jsx';
 import Home from './Rajcomponent/Home/Home.jsx';
 import Achievement from './Jawan/Achievement/Achievement.jsx';
+import Applyleave from './Jawan/leave/apply_leave.jsx';
 
 
 
@@ -24,6 +25,7 @@ import Achievement from './Jawan/Achievement/Achievement.jsx';
         <Route path="/phq-dashboard" element={<PhqDashboard />} />
         <Route path="/achievement" element={<Achievement />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/apply-leave" element={<Applyleave />} />
       </Routes>
     </Router>
   );
