@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importing Components
 
-import Login from "./components/Login/Login.jsx";
+//import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 import AdminDashboard from './components/dashboards/AdminDashboard.jsx';
 import JawanDashboard from './components/dashboards/JawanDashboard.jsx';
@@ -18,7 +18,7 @@ import Applyleave from './Jawan/leave/apply_leave.jsx';
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+{/*         <Route path="/" element={<Login />} /> */}
         <Route path="/register" element={<Register />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/jawan-dashboard" element={<JawanDashboard />} />
