@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importing Components
 
-import Login from "./Component/Login/Login.jsx";
-import Register from "./Component/Register/Register.jsx";
-import AdminDashboard from './Component/dashboards/AdminDashboard.jsx';
-import JawanDashboard from './Component/dashboards/JawanDashboard.jsx';
-import PhqDashboard from './Component/dashboards/PhqDashboard.jsx';
+import Login from "./Components/Login/Login.jsx";
+import Register from "./Components/Register/Register.js";
+import AdminDashboard from './Components/dashboards/AdminDashboard.js';
+import JawanDashboard from './Components/dashboards/JawanDashboard.js';
+import PhqDashboard from './Components/dashboards/PhqDashboard.js';
 import Home from './Rajcomponent/Home/Home.jsx';
 import Achievement from './Jawan/Achievement/Achievement.jsx';
 import Applyleave from './Jawan/leave/apply_leave.jsx';
